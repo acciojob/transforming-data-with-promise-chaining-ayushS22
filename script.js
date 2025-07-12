@@ -37,7 +37,7 @@ button.addEventListener("click",()=>{
 				   resolve(result);
 			   },1000);
 		   });
-		}).then((value)={
+		}).then((value)=>{
 	       return new Promise((resolve) => {
             setTimeout(() => {
                 const result = value / 2;
@@ -54,4 +54,6 @@ button.addEventListener("click",()=>{
             }, 1000);
         });
 		});	
+
+});
 });
