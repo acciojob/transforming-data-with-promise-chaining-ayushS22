@@ -15,14 +15,14 @@ button.addEventListener("click",()=>{
 
     output.innerText = ""; // Clear old result
 // Step 1: Initial promise after 2 seconds
-	new Promise((resolve)=>{
+	new Promise((resolve) => {
 		setTimeout(()=>{
 			output.innerText = `Result: ${number}`;
 			resolve(number);//pass the value next .then
 		},2000);
 	})
 		.then((value)=>{
-			return new Promise((resolve)={
+			return new Promise((resolve)=>{
 				setTimeout(()=>{
 					const result = value*2;
 					output.innerText = `Result: ${result}`;
@@ -32,7 +32,7 @@ button.addEventListener("click",()=>{
 		}).then((value)=>{
 	       return new Promise((resolve)=>{
 			   setTimeout(()=>{
-				   const result = value-3;
+				   const result = value - 3;
 				   output.innerText = `Result: ${result}`;
 				   resolve(result);
 			   },1000);
